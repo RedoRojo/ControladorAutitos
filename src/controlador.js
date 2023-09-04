@@ -4,7 +4,22 @@ export default class Controlador {
     }
 
     obtenerCoordenaX(posicion) {
-        return Number(posicion[0]); 
+        if(this.esNumero(posicion[0])) {
+            return Number(posicion[0]); 
+        }else 
+            return false; 
+    }
+
+    esNumero(caracter) { 
+        if(typeof caracter !== 'string') {
+            return false; 
+        }
+
+        if(caracter.trim() === '') {
+            return false; 
+        }
+
+        return !isNaN(caracter); 
     }
 
 }
