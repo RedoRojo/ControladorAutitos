@@ -4,6 +4,7 @@ export default class Controlador {
     }
 
     obtenerCoordenaX(posicion) {
-        return 3; 
+        return Number(posicion[0]); 
     }
+
 }
