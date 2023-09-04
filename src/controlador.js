@@ -4,22 +4,19 @@ export default class Controlador {
     }
 
     obtenerCoordenaX(posicion) {
-        if(this.esNumero(posicion[0])) {
-            return Number(posicion[0]); 
-        }else 
-            return false; 
+        let numero = ""; 
+
+        for(let i = 0; i<posicion.length; i++) {
+            if(posicion[i] === ',') break; 
+            numero += posicion[i];
+        }
+        
+        if(this.esNumero(numero)) return  Number(numero)
+        else return false; 
     }
 
-    esNumero(caracter) { 
-        if(typeof caracter !== 'string') {
-            return false; 
-        }
-
-        if(caracter.trim() === '') {
-            return false; 
-        }
-
-        return !isNaN(caracter); 
+    esNumero(texto) { 
+        return !isNaN(texto); 
     }
 
 }
