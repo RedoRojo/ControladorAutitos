@@ -14,6 +14,10 @@ export default class Controlador {
         if(this.esNumero(numero)) return  Number(numero)
         else return false; 
     }
+    
+    obtenerCoordenaY(posicion) { 
+        return 2;
+    }
 
     esNumero(texto) { 
         return !isNaN(texto); 

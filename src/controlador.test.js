@@ -21,4 +21,9 @@ describe("Coordena Inicial", () => {
     expect(controlador.obtenerCoordenaX("10,2N")).toEqual(10);
   });
 
+  it("Deberia reconocer el segundo numero de la coordenada: 10,2N", () => {
+    let controlador = new Controlador(); 
+    expect(controlador.obtenerCoordenaY("10,2N")).toEqual(2);
+  });
+
 });
