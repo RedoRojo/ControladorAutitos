@@ -16,7 +16,14 @@ export default class Controlador {
     }
     
     obtenerCoordenaY(posicion) { 
-        return 2;
+        let i = 0;
+        let numero = "";
+        for(i = 0; i<posicion.length; i++) {
+            if(posicion[i] === ',') break; 
+        }
+
+        numero += posicion[i+1]; 
+        return Number(numero)
     }
 
     esNumero(texto) { 
