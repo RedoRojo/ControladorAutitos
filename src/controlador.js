@@ -24,7 +24,9 @@ export default class Controlador {
         for(i = i + 1; i<posicion.length - 1; i++) {
             numero += posicion[i];
         }
-        return Number(numero)
+
+        if(this.esNumero(numero)) return Number(numero); 
+        else return false; 
     }
 
     esNumero(texto) { 

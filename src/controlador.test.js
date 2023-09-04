@@ -35,4 +35,10 @@ describe("Coordena Inicial", () => {
     let controlador = new Controlador(); 
     expect(controlador.obtenerCoordenaY("10,10N")).toEqual(10);
   });
+
+  it("Deberia devolver false al no reconocer el segundo numero de la coordenada: 10,fdaN", () => {
+    let controlador = new Controlador(); 
+    expect(controlador.obtenerCoordenaY("10,fadN")).toEqual(false);
+  });
+
 });
