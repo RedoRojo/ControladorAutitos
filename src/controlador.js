@@ -28,6 +28,10 @@ export default class Controlador {
         if(this.esNumero(numero)) return Number(numero); 
         else return false; 
     }
+     
+    obtenerDireccion(posicion) {
+        return "N";
+    }
 
     esNumero(texto) { 
         return !isNaN(texto); 

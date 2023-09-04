@@ -41,4 +41,9 @@ describe("Coordena Inicial", () => {
     expect(controlador.obtenerCoordenaY("10,fadN")).toEqual(false);
   });
 
+  it("Deberia reconocer la direccion de la coordenada: 3,3N", () => {
+    let controlador = new Controlador(); 
+    expect(controlador.obtenerDireccion("3,3N")).toEqual("N");
+  });
+
 });
