@@ -30,7 +30,8 @@ export default class Controlador {
     }
      
     obtenerDireccion(posicion) {
-        return "N";
+        let longitud = posicion.length
+        return posicion[longitud-1]
     }
 
     esNumero(texto) { 
