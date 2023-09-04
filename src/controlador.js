@@ -21,8 +21,9 @@ export default class Controlador {
         for(i = 0; i<posicion.length; i++) {
             if(posicion[i] === ',') break; 
         }
-
-        numero += posicion[i+1]; 
+        for(i = i + 1; i<posicion.length - 1; i++) {
+            numero += posicion[i];
+        }
         return Number(numero)
     }
 
