@@ -217,7 +217,13 @@ export default class Controlador {
     }
 
     ejecutarSecuencia() {
-        return "0,2E"; 
+        for(let i = 0; i<this.secuencia.length; i++) {
+            if(this.secuencia[i] == "I") this.posicion = this.ejecutarComandoI(this.posicion); 
+            else if(this.secuencia[i] == "D") this.posicion = this.ejecutarComandoD(this.posicion); 
+            else if(this.secuencia[i] == "A") this.posicion = this.ejecutarComandoA(this.posicion); 
+        }
+
+        return this.posicion; 
     }
 
     posicionValida(posicion) {
