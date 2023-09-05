@@ -105,4 +105,10 @@ describe("Coordena Inicial", () => {
     let controlador = new Controlador();
     expect(controlador.obtenerSecuenciaDeComandos("2,2N/AAI")).toEqual("AAI"); 
   }); 
+  
+  it("Deberia reconocer la coordenada inicial de al cadena de entrada: 2,2N/AAI", () => {
+    let controlador = new Controlador();
+    expect(controlador.obtenerCoordenadaInicial("/2,2N/AAI")).toEqual("2,2N"); 
+  }); 
+  
 });

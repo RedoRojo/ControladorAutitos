@@ -2,6 +2,21 @@ export default class Controlador {
     constructor(comandos = "") {
         this.comandos = comandos; 
     }
+     
+    obtenerCoordenadaInicial(cadena) {
+        let i = 0; 
+        let coordenada = "";   
+        for(i = 0; i<cadena.length; i++) {
+            if(cadena[i] === "/") break; 
+        }    
+
+        for(i = i + 1; i<cadena.length; i++) { 
+            if(cadena[i] === "/") break; 
+            coordenada+=cadena[i];
+        }
+
+        return coordenada; 
+    }
 
     obtenerSecuenciaDeComandos(cadena) {
         let i = cadena.length - 1; 
