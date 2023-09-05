@@ -109,9 +109,19 @@ export default class Controlador {
         }
 
         if(i == dimensiones.length) {
-            correcta = false 
-            return correcta; 
+            correcta = false;  
+        } else {
+            let primer_numero = ""; 
+
+            for(let j = 0; j<i; j++) { 
+                primer_numero += dimensiones[j];
+            }
+
+            if(this.esNumero(primer_numero)) correcta = true; 
+            else correcta = false; 
+            
         }
+
 
         return correcta; 
     }
