@@ -112,12 +112,15 @@ export default class Controlador {
             correcta = false;  
         } else {
             let primer_numero = ""; 
-
+            let segundo_numero = ""; 
             for(let j = 0; j<i; j++) { 
                 primer_numero += dimensiones[j];
             }
+            for(i = i + 1; i<dimensiones.length; i++) {
+                segundo_numero += dimensiones[i];
+            }
 
-            if(this.esNumero(primer_numero)) correcta = true; 
+            if(this.esNumero(primer_numero) && this.esNumero(segundo_numero)) correcta = true; 
             else correcta = false; 
             
         }
