@@ -10,12 +10,15 @@ form.addEventListener("submit", (event) => {
 
   controlador = new Controlador(); 
 
-  if(controlador.validarCoordenada(comandos.value))  {
-    pos_inicial.innerHTML = comandos.value; 
+  coordenada_inicial = controlador.obtenerCoordenadaInicial(comandos.value); 
+  secuencia = controlador.obtenerSecuenciaDeComandos(comandos.value); 
+
+  if(controlador.validarCoordenada(coordenada_inicial))  {
+    pos_inicial.innerHTML = coordenada_inicial; 
   }else {
     alert("Ingrese una posicion inicial correcta"); 
   }
 
-  
+  sec_comandos.innerHTML = secuencia; 
 
 });
