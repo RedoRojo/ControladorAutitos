@@ -180,7 +180,30 @@ export default class Controlador {
     }
 
     ejecutarComandoA(posicion) {
-        return "4,3E"; 
+        let direccion = this.obtenerDireccion(posicion); 
+        let pos_x = this.obtenerCoordenaX(posicion); 
+        let pos_y = this.obtenerCoordenaY(posicion); 
+        let nueva_pos = ""; 
+
+        
+        switch (direccion) {
+            case 'N': 
+                pos_y++; 
+                break; 
+            case 'E': 
+                pos_x++;
+                break; 
+            case 'S': 
+                pos_y--;
+                break; 
+            case 'O': 
+                pos_x--;
+                break; 
+        }
+
+        nueva_pos = (String(pos_x) + "," + String(pos_y) + direccion); 
+
+        return nueva_pos; 
     }
 
     esNumero(texto) { 
