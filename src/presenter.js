@@ -27,7 +27,12 @@ form.addEventListener("submit", (event) => {
     alert("ingrese una secuencia de comandos correcta"); 
   }
 
-  dimen.innerHTML = dimensiones
+  if(controlador.validarDimensiones(dimensiones)) {
+    dimen.innerHTML = dimensiones; 
+  } else { 
+    alert("Ingrese unas dimesiones para la superficie validas"); 
+  }
+
 
 
 });
