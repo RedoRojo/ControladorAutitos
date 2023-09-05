@@ -126,4 +126,9 @@ describe("Coordena Inicial", () => {
     expect(controlador.validarSecuencia("IAAD")).toEqual(true); 
   }); 
 
+  it("Deberia retornar false al validar la secuencia de comandos: IAADfds", () => {
+    let controlador = new Controlador();
+    expect(controlador.validarSecuencia("IAADfds")).toEqual(false); 
+  }); 
+
 });
