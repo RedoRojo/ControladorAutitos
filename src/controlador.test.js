@@ -90,4 +90,9 @@ describe("Coordena Inicial", () => {
     let controlador = new Controlador();
     expect(controlador.validarCoordenada("1923,3232N")).toEqual(true); 
   }); 
+
+  it("Deberia retornar false al validar la coordenada: fdadfas", () => {
+    let controlador = new Controlador();
+    expect(controlador.validarCoordenada("fdadfas")).toEqual(false); 
+  }); 
 });
