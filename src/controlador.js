@@ -37,6 +37,17 @@ export default class Controlador {
         else return false; 
     }
 
+    validarCoordenada(posicion) {
+        let correcta = true; 
+
+        if(this.obtenerCoordenaX(posicion) === false ||
+            this.obtenerCoordenaY(posicion) === false ||
+            this.obtenerDireccion(posicion) === false 
+        ) correcta = false; 
+
+        return correcta; 
+    }
+
     esNumero(texto) { 
         return !isNaN(texto); 
     }
