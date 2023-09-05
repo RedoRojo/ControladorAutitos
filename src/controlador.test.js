@@ -100,4 +100,9 @@ describe("Coordena Inicial", () => {
     let controlador = new Controlador();
     expect(controlador.obtenerSecuenciaDeComandos("2,2N/AAAII")).toEqual("AAAII"); 
   }); 
+
+  it("Deberia reconocer la parte de comandos de la entrada: 2,2N/AAI", () => {
+    let controlador = new Controlador();
+    expect(controlador.obtenerSecuenciaDeComandos("2,2N/AAI")).toEqual("AAI"); 
+  }); 
 });

@@ -4,7 +4,15 @@ export default class Controlador {
     }
 
     obtenerSecuenciaDeComandos(cadena) {
-        return "AAAII"; 
+        let i = cadena.length - 1; 
+        let secuencia = "";   
+        for(i; i>=0; i--) {
+            if(cadena[i] === "/") break; 
+        }    
+
+        for(i = i + 1; i<cadena.length; i++) secuencia+=cadena[i];
+
+        return secuencia; 
     }
      
     obtenerCoordenaX(posicion) {
