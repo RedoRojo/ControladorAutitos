@@ -61,7 +61,7 @@ comando.addEventListener("click", () => {
     alert("Ingrese unas dimesiones para la superficie validas"); 
   }
 
-  final = controlador.ejecutarComandoD(coordenada_inicial); 
+  final = controlador.ejecutarComandoA(coordenada_inicial); 
   pos_final.innerHTML = final; 
 
 })
