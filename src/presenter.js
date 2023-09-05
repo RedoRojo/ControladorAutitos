@@ -19,6 +19,11 @@ form.addEventListener("submit", (event) => {
     alert("Ingrese una posicion inicial correcta"); 
   }
 
-  sec_comandos.innerHTML = secuencia; 
+  if(controlador.validarSecuencia(secuencia)) {
+    sec_comandos.innerHTML = secuencia; 
+  } else {
+    alert("ingrese una secuencia de comandos correcta"); 
+  }
+
 
 });
