@@ -115,4 +115,9 @@ describe("Coordena Inicial", () => {
     let controlador = new Controlador();
     expect(controlador.validarSecuencia("IAA")).toEqual(true); 
   }); 
+  
+  it("Deberia retornar false al validar la secuencia de comandos: IAAU", () => {
+    let controlador = new Controlador();
+    expect(controlador.validarSecuencia("IAAU")).toEqual(false); 
+  }); 
 });

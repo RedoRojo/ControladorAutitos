@@ -76,7 +76,18 @@ export default class Controlador {
     }
     
     validarSecuencia(secuencia) { 
-        return true; 
+        let correcta = true; 
+
+        for(let i = 0; i<secuencia.length; i++) { 
+            if(secuencia[i] != "I" &&
+                secuencia[i] != "A" 
+            ) {
+                correcta = false; 
+                break;
+            }
+        }
+
+        return correcta; 
     }
 
     esNumero(texto) { 
