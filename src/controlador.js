@@ -129,6 +129,10 @@ export default class Controlador {
         return correcta; 
     }
 
+    ejecutarComandoI(posicion) {
+        return "2,2O"; 
+    }
+
     esNumero(texto) { 
         return !isNaN(texto); 
     }
