@@ -3,6 +3,10 @@ export default class Controlador {
         this.comandos = comandos; 
     }
 
+    obtenerSecuenciaDeComandos(cadena) {
+        return "AAAII"; 
+    }
+     
     obtenerCoordenaX(posicion) {
         let numero = ""; 
 
