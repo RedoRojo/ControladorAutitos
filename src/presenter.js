@@ -6,7 +6,7 @@ const pos_inicial = document.querySelector("#pos-inicial");
 const pos_final = document.querySelector("#pos-final"); 
 const sec_comandos = document.querySelector("#sec-comandos"); 
 const dimen = document.querySelector("#dimensiones"); 
-const comando_I = document.querySelector("#comando-I-button"); 
+const comando = document.querySelector("#comando-button"); 
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -36,7 +36,7 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-comando_I.addEventListener("click", () => {
+comando.addEventListener("click", () => {
   controlador = new Controlador(); 
 
   coordenada_inicial = controlador.obtenerCoordenadaInicial(comandos.value);
@@ -61,7 +61,7 @@ comando_I.addEventListener("click", () => {
     alert("Ingrese unas dimesiones para la superficie validas"); 
   }
 
-  final = controlador.ejecutarComandoI(coordenada_inicial); 
+  final = controlador.ejecutarComandoD(coordenada_inicial); 
   pos_final.innerHTML = final; 
 
 })
