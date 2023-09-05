@@ -236,4 +236,8 @@ describe("Coordena Inicial", () => {
     expect(controlador.ejecutarSecuencia()).toEqual("0,2O"); 
   });
   
+  it("Deberia ejecutar toda la secuencia de comandos y retornar la posicion final", () => {
+    let controlador = new Controlador("5,5/1,2N/IAIAIAIAA"); 
+    expect(controlador.ejecutarSecuencia()).toEqual("1,3N"); 
+  });
 });
