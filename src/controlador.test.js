@@ -210,4 +210,9 @@ describe("Coordena Inicial", () => {
     let controlador = new Controlador(); 
     expect(controlador.ejecutarComandoA("3,3S")).toEqual("3,2S"); 
   });
+
+  it("Deberia ignorar el comando A sobre la posicion 3,0S", () => {
+    let controlador = new Controlador("4,4/0,0N/IAA"); 
+    expect(controlador.ejecutarComandoA("3,0S")).toEqual("3,0S"); 
+  });
 });

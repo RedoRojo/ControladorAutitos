@@ -1,6 +1,9 @@
 export default class Controlador {
-    constructor(comandos = "") {
+    constructor(comandos = "1000,1000/0,0N/A") {
         this.comandos = comandos; 
+        this.dimensiones = this.obtenerDimensiones(comandos); 
+        this.limiteX = this.obtenerCoordenaX(this.dimensiones);  
+        this.limiteY = this.obtenerCoordenaY(this.dimensiones + "N"); 
     }
 
     obtenerDimensiones(cadena) {
@@ -203,7 +206,21 @@ export default class Controlador {
 
         nueva_pos = (String(pos_x) + "," + String(pos_y) + direccion); 
 
-        return nueva_pos; 
+        if(this.posicionValida(nueva_pos)) {
+            return nueva_pos; 
+        }
+
+        return posicion; 
+
+    }
+
+    posicionValida(posicion) {
+        let pos_x = this.obtenerCoordenaX(posicion); 
+        let pos_y = this.obtenerCoordenaY(posicion); 
+        let valida = true; 
+        if(pos_x < 0 || pos_x > this.limiteX) valida = false; 
+        if(pos_y < 0 || pos_y > this.limiteY) valida = false; 
+        return valida; 
     }
 
     esNumero(texto) { 
