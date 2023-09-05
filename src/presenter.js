@@ -37,7 +37,7 @@ form.addEventListener("submit", (event) => {
 });
 
 comando.addEventListener("click", () => {
-  controlador = new Controlador(); 
+  controlador = new Controlador(comandos.value); 
 
   coordenada_inicial = controlador.obtenerCoordenadaInicial(comandos.value);
   secuencia = controlador.obtenerSecuenciaDeComandos(comandos.value); 
