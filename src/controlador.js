@@ -80,7 +80,8 @@ export default class Controlador {
 
         for(let i = 0; i<secuencia.length; i++) { 
             if(secuencia[i] != "I" &&
-                secuencia[i] != "A" 
+                secuencia[i] != "A" &&
+                secuencia[i] != "D"
             ) {
                 correcta = false; 
                 break;
