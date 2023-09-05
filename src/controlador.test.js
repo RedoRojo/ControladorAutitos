@@ -145,4 +145,9 @@ describe("Coordena Inicial", () => {
     let controlador = new Controlador(); 
     expect(controlador.validarDimensiones("2,2")).toEqual(true); 
   });
+
+  it("Deberia retonar true al validar las dimensiones de la superficie: 2a", () => {
+    let controlador = new Controlador(); 
+    expect(controlador.validarDimensiones("2a")).toEqual(false); 
+  });
 });

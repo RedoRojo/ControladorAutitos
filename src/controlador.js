@@ -101,7 +101,19 @@ export default class Controlador {
     }
     
     validarDimensiones(dimensiones) {
-        return true; 
+        let i = 0; 
+
+        let correcta = true; 
+        for(i = 0; i<dimensiones.length; i++) {
+            if(dimensiones[i] == ",") break; 
+        }
+
+        if(i == dimensiones.length) {
+            correcta = false 
+            return correcta; 
+        }
+
+        return correcta; 
     }
 
     esNumero(texto) { 
