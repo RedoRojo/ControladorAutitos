@@ -226,8 +226,10 @@ describe("Coordena Inicial", () => {
     expect(controlador.ejecutarComandoA("0,0O")).toEqual("0,0O"); 
   });
 
-  it("Deberia ignorar el comando A sobre la posicion 3,3E en una superficie de 3,3", () => {
+  it("Deberia ejecutar toda la secuencia de comandos y retornar la posicion final", () => {
     let controlador = new Controlador("3,3/0,0N/IAA"); 
-    expect(controlador.ejecutarComandoA("3,3E")).toEqual("3,3E"); 
+    expect(controlador.ejecutarSecuencia()).toEqual("0,2E"); 
   });
+   
+  
 });

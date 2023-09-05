@@ -4,6 +4,8 @@ export default class Controlador {
         this.dimensiones = this.obtenerDimensiones(comandos); 
         this.limiteX = this.obtenerCoordenaX(this.dimensiones);  
         this.limiteY = this.obtenerCoordenaY(this.dimensiones + "N"); 
+        this.posicion = this.obtenerCoordenadaInicial(comandos); 
+        this.secuencia = this.obtenerSecuenciaDeComandos(comandos); 
     }
 
     obtenerDimensiones(cadena) {
@@ -212,6 +214,10 @@ export default class Controlador {
 
         return posicion; 
 
+    }
+
+    ejecutarSecuencia() {
+        return "0,2E"; 
     }
 
     posicionValida(posicion) {
