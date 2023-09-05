@@ -60,5 +60,10 @@ describe("Coordena Inicial", () => {
     let controlador = new Controlador(); 
     expect(controlador.obtenerDireccion("2,2F")).toEqual(false);
   });
-  
+
+  it("Deberia reconocer la direccion de la coordenada: 3,3O", () => {
+    let controlador = new Controlador(); 
+    expect(controlador.obtenerDireccion("3,3O")).toEqual("O");
+  });
+
 });
