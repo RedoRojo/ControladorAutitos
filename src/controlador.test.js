@@ -86,4 +86,8 @@ describe("Coordena Inicial", () => {
     expect(controlador.validarCoordenada("1923,32B")).toEqual(false); 
   }); 
 
+  it("Deberia retornar true al validar la coordenada: 1923,3232N", () => {
+    let controlador = new Controlador();
+    expect(controlador.validarCoordenada("1923,3232N")).toEqual(true); 
+  }); 
 });
