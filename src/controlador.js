@@ -74,6 +74,10 @@ export default class Controlador {
 
         return correcta; 
     }
+    
+    validarSecuencia(secuencia) { 
+        return true; 
+    }
 
     esNumero(texto) { 
         return !isNaN(texto); 

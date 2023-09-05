@@ -111,4 +111,8 @@ describe("Coordena Inicial", () => {
     expect(controlador.obtenerCoordenadaInicial("/2,2N/AAI")).toEqual("2,2N"); 
   }); 
   
+  it("Deberia retornar true al validar la secuencia de comandos: IAA", () => {
+    let controlador = new Controlador();
+    expect(controlador.validarSecuencia("IAA")).toEqual(true); 
+  }); 
 });
