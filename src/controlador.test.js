@@ -76,4 +76,9 @@ describe("Coordena Inicial", () => {
     expect(controlador.validarCoordenada("3,3N")).toEqual(true); 
   }); 
 
+  it("Deberia retornar false al validar la coordenada: 3,3,324", () => {
+    let controlador = new Controlador();
+    expect(controlador.validarCoordenada("3,3,324")).toEqual(false); 
+  }); 
+
 });
