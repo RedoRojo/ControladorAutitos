@@ -145,6 +145,9 @@ export default class Controlador {
             case 'S': 
                 direccion = 'E'; 
                 break; 
+            case 'O': 
+                direccion = 'S'; 
+                break; 
         }
 
         nueva_pos += direccion; 
