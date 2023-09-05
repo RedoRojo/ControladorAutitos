@@ -4,6 +4,7 @@ const comandos = document.querySelector("#comandos");
 const form = document.querySelector("#controlador-form");
 const pos_inicial = document.querySelector("#pos-inicial"); 
 const sec_comandos = document.querySelector("#sec-comandos")
+const dimen = document.querySelector("#dimensiones")
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -12,6 +13,7 @@ form.addEventListener("submit", (event) => {
 
   coordenada_inicial = controlador.obtenerCoordenadaInicial(comandos.value); 
   secuencia = controlador.obtenerSecuenciaDeComandos(comandos.value); 
+  dimensiones = controlador.obtenerDimensiones(comandos.value); 
 
   if(controlador.validarCoordenada(coordenada_inicial))  {
     pos_inicial.innerHTML = coordenada_inicial; 
@@ -24,6 +26,8 @@ form.addEventListener("submit", (event) => {
   } else {
     alert("ingrese una secuencia de comandos correcta"); 
   }
+
+  dimen.innerHTML = dimensiones
 
 
 });
