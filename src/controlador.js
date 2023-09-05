@@ -4,7 +4,12 @@ export default class Controlador {
     }
 
     obtenerDimensiones(cadena) {
-        return "5,5"; 
+        let dimensiones = ""; 
+        for(let i = 0; i < cadena.length; i++) {
+            if(cadena[i] == "/") break; 
+            dimensiones += cadena[i]; 
+        }
+        return dimensiones; 
     }
      
     obtenerCoordenadaInicial(cadena) {

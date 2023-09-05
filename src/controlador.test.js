@@ -131,8 +131,13 @@ describe("Coordena Inicial", () => {
     expect(controlador.validarSecuencia("IAADfds")).toEqual(false); 
   }); 
 
-  it("Deberia reconocer las dimensiones de la superficie en la cadena de entrada", () => {
+  it("Deberia reconocer las dimensiones de la superficie en la cadena de entrada 5,5/2,2N/IIA", () => {
     let controlador = new Controlador();
     expect(controlador.obtenerDimensiones("5,5/2,2N/IIA")).toEqual("5,5"); 
+  }); 
+
+  it("Deberia reconocer las dimensiones de la superficie en la cadena de entrada 3,3/2,2N/IIA", () => {
+    let controlador = new Controlador();
+    expect(controlador.obtenerDimensiones("3,3/2,2N/IIA")).toEqual("3,3"); 
   }); 
 });
