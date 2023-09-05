@@ -31,7 +31,10 @@ export default class Controlador {
      
     obtenerDireccion(posicion) {
         let longitud = posicion.length
-        return posicion[longitud-1]
+        let direccion = posicion[longitud-1]
+        
+        if(direccion === "E" || direccion === "S" || direccion === "N" || direccion === "O") return direccion; 
+        else return false; 
     }
 
     esNumero(texto) { 

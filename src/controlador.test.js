@@ -56,4 +56,9 @@ describe("Coordena Inicial", () => {
     expect(controlador.obtenerDireccion("3,3S")).toEqual("S");
   });
 
+  it("Deberia devolver false al no reconocer un direccion valida para la coordenanda: 2,2F", () => {
+    let controlador = new Controlador(); 
+    expect(controlador.obtenerDireccion("2,2F")).toEqual(false);
+  });
+  
 });
