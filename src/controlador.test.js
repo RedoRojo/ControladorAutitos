@@ -186,4 +186,8 @@ describe("Coordena Inicial", () => {
     expect(controlador.ejecutarComandoD("3,3N")).toEqual("3,3E"); 
   });
   
+  it("Deberia ejecutar el comando D sobre la posicion 3,3E", () => {
+    let controlador = new Controlador(); 
+    expect(controlador.ejecutarComandoD("3,3E")).toEqual("3,3S"); 
+  });
 });

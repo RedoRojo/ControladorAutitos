@@ -155,7 +155,28 @@ export default class Controlador {
     }
     
     ejecutarComandoD(posicion) {
-        return "3,3E"; 
+        let direccion = this.obtenerDireccion(posicion); 
+        let nueva_pos = "";
+        nueva_pos += String(this.obtenerCoordenaX(posicion)); 
+        nueva_pos += ','; 
+        nueva_pos += String(this.obtenerCoordenaY(posicion)); 
+        switch (direccion) {
+            case 'N': 
+                direccion = 'E'; 
+                break; 
+            case 'E': 
+                direccion = 'S';
+                break; 
+            case 'S': 
+                direccion = 'O'; 
+                break; 
+            case 'O': 
+                direccion = 'N'; 
+                break; 
+        }
+
+        nueva_pos += direccion; 
+        return nueva_pos; 
     }
 
     esNumero(texto) { 
