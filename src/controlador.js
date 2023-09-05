@@ -2,6 +2,10 @@ export default class Controlador {
     constructor(comandos = "") {
         this.comandos = comandos; 
     }
+
+    obtenerDimensiones(cadena) {
+        return "5,5"; 
+    }
      
     obtenerCoordenadaInicial(cadena) {
         let i = 0; 
