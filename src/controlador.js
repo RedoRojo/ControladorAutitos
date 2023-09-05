@@ -151,7 +151,6 @@ export default class Controlador {
         }
 
         nueva_pos += direccion; 
-
         return nueva_pos; 
     }
 
