@@ -99,6 +99,10 @@ export default class Controlador {
 
         return correcta; 
     }
+    
+    validarDimensiones(dimensiones) {
+        return true; 
+    }
 
     esNumero(texto) { 
         return !isNaN(texto); 
