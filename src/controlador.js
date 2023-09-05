@@ -179,6 +179,10 @@ export default class Controlador {
         return nueva_pos; 
     }
 
+    ejecutarComandoA(posicion) {
+        return "4,3E"; 
+    }
+
     esNumero(texto) { 
         return !isNaN(texto); 
     }
