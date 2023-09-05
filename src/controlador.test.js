@@ -180,4 +180,10 @@ describe("Coordena Inicial", () => {
     let controlador = new Controlador(); 
     expect(controlador.ejecutarComandoI("2,2O")).toEqual("2,2S"); 
   });
+   
+  it("Deberia ejecutar el comando D sobre la posicion 3,3N", () => {
+    let controlador = new Controlador(); 
+    expect(controlador.ejecutarComandoD("3,3N")).toEqual("3,3E"); 
+  });
+  
 });

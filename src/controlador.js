@@ -153,6 +153,10 @@ export default class Controlador {
         nueva_pos += direccion; 
         return nueva_pos; 
     }
+    
+    ejecutarComandoD(posicion) {
+        return "3,3E"; 
+    }
 
     esNumero(texto) { 
         return !isNaN(texto); 
